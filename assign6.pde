@@ -67,7 +67,7 @@ void draw()
 
 		//enemys
 		if(millis() - time >= wait){
-			addEnemy(currentType++);
+  	addEnemy(currentType++);
 			currentType = currentType%4;
 		}		
 
@@ -86,7 +86,7 @@ void draw()
 			}
 		}
 		// 這地方應該加入Fighter 血量顯示UI
-		
+          hpDisplay.updateWithFighterHP(fighter.hp);	
 	}
 	else if (state == GameState.END) {
 		bg.draw();
@@ -136,4 +136,3 @@ void keyReleased(){
     }
   }
 }
-
